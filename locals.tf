@@ -29,13 +29,13 @@ locals {
       dimension_name = ["LoadBalancer"]
       metrics = {
         "TargetResponseTime" = { graph_specs = { "yAxis" = "left"} }
-        "RequestCount" = { graph_specs = {"stat": "Sum", "yAxis" = "right"} }
+        "RequestCount" = { graph_specs = {"yAxis" = "right", "stat": "Sum"} }
         "ActiveConnectionCount" = { graph_specs = { "yAxis" = "right" } }
         "NewConnectionCount" = { graph_specs = { "yAxis" = "right" } }
-        "HTTPCode_Target_2XX_Count" = { graph_specs = { "yAxis" = "right" } }
-        "HTTPCode_Target_4XX_Count" = { graph_specs = { "yAxis" = "right", "visible" = true } }
-        "HTTPCode_Target_5XX_Count" = { graph_specs = { "yAxis" = "right", "visible" = true } }
-        "HTTPCode_ELB_5XX_Count" = { graph_specs = { "yAxis" = "right", "visible" = false} }
+        "HTTPCode_Target_2XX_Count" = { graph_specs = { "yAxis" = "right", stat = "Sum"  } }
+        "HTTPCode_Target_4XX_Count" = { graph_specs = { "yAxis" = "right", stat = "Sum" , "visible" = true } }
+        "HTTPCode_Target_5XX_Count" = { graph_specs = { "yAxis" = "right", stat = "Sum" , "visible" = true } }
+        "HTTPCode_ELB_5XX_Count" = { graph_specs = { "yAxis" = "right", stat = "Sum" , "visible" = false} }
       }      
     }
     ec2_scalingGroup_cpu = {
