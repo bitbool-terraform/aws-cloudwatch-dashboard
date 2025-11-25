@@ -33,9 +33,9 @@ locals {
         "ActiveConnectionCount" = { graph_specs = { "yAxis" = "right" } }
         "NewConnectionCount" = { graph_specs = { "yAxis" = "right" } }
         "HTTPCode_Target_2XX_Count" = { graph_specs = { "yAxis" = "right" } }
-        "HTTPCode_Target_4XX_Count" = { graph_specs = { "yAxis" = "right", "visible" = false } }
-        "HTTPCode_Target_5XX_Count" = { graph_specs = { "yAxis" = "right", "visible" = false } }
-        "HTTPCode_ELB_5XX_Count" = { graph_specs = { "yAxis" = "right"} }
+        "HTTPCode_Target_4XX_Count" = { graph_specs = { "yAxis" = "right", "visible" = true } }
+        "HTTPCode_Target_5XX_Count" = { graph_specs = { "yAxis" = "right", "visible" = true } }
+        "HTTPCode_ELB_5XX_Count" = { graph_specs = { "yAxis" = "right", "visible" = false} }
       }      
     }
     ec2_scalingGroup_cpu = {
