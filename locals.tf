@@ -42,7 +42,7 @@ locals {
       namespace = "AWS/EC2"
       dimension_name = ["AutoScalingGroupName"]
       metrics = {
-        "CPUUtilization" = { graph_specs = { "yAxis" = "right" } }    
+        "CPUUtilization" = { graph_specs = { "yAxis" = "left" } }    
       }  
     }
     cwagent_memory = {
